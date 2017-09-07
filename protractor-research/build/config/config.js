@@ -49,7 +49,7 @@ exports.config = {
     /**
      * Required. Spec patterns are relative to the location of this config.
      */
-    specs: ['../../specs/spec.ts'],
+    specs: ['../../specs/testMatcher.js'],
     /**
      * Patterns to exclude specs.
      */
@@ -287,23 +287,16 @@ exports.config = {
      * See https://github.com/jasmine/jasmine-npm/blob/master/lib/jasmine.js
      * for the exact options available.
      */
-    /*jasmineNodeOpts?: {
-      // If true, print colors to the terminal.
-      showColors?: boolean;
-      // Default time to wait in ms before a test fails.
-      defaultTimeoutInterval?: number;
-      // Function called to print jasmine results.
-      print?: () => void;
-      // If set, only execute specs whose names match the pattern, which is
-      // internally compiled to a RegExp.
-      grep?: string;
-      // Inverts 'grep' matches
-      invertGrep?: boolean;
-      // If true, run specs in semi-random order
-      random?: boolean,
-      // Set the randomization seed if randomization is turned on
-      seed?: string,
-    };*/
+    jasmineNodeOpts: {
+        // If true, print colors to the terminal.
+        showColors: true,
+        // Default time to wait in ms before a test fails.
+        //defaultTimeoutInterval?: number;
+        // Function called to print jasmine results.
+        //print?: () => void,
+        isVerbose: true,
+        includeStackTrace: true,
+    },
     /**
      * Options to be passed to Mocha.
      *
