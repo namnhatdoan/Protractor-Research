@@ -6,22 +6,27 @@
   "scripts": {
     "tsc": "tsc",
     "mocha-test": "mocha --no-timeouts build/",
-    "protractor-test": "protractor build/config/config.js"
+    "test": "protractor build/config/config.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/jasmine": "^2.5.54",
     "@types/node": "^8.0.26",
     "@types/selenium-webdriver": "^3.0.6",
     "chai": "^4.1.2",
+    "dotenv": "^4.0.0",
+    "jasmine": "^2.8.0",
     "mocha": "^3.5.0",
     "mocha-typescript": "^1.1.7",
     "protractor": "^5.1.2",
     "ts-node": "^3.3.0",
     "typescript": "^2.5.2"
   },
-  "devDependencies": {    
+  "devDependencies": {
+    "@types/jasmine": "^2.5.54",
     "@types/node": "^8.0.3",
-    "@types/selenium-webdriver": "^3.0.0"    
+    "@types/selenium-webdriver": "^3.0.0",
+    "jasmine-spec-reporter": "^4.2.1"
   }
 }

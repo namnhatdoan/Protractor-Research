@@ -1,0 +1,37 @@
+JASMINE:
+Test suites: describe(str, func)
+Specs: it(str, func)  , contains one or more expectations
+Expectations: expect(actual_value).[not].[matcher]
+Matcher:
+  - toBe(exp) ~ ===
+  - toEqual(exp)
+  - toMatch(exp)   ->  (string, regex)
+  - toBeDefined()/toBeUndefined() ~ compares against 'undefined'
+  - toBeNull()
+  - toBeTruthy()/toBeFalsy() -> boolean casting test
+  - toContain(exp) -> finding an item in array or finding a substr
+  - toBeLessThan(exp)/toBeGreateThan(exp)
+  - toBeCloseTo(exp, round) ??? implement ???
+  - toThrow()
+  - toThrowError(exp) -> string/regex, exp can be name or type of Error or both (Type, name)
+** Custom matcher (https://jasmine.github.io/2.0/custom_matcher.html)
+
+BeforeEach ~ SetUP
+AfterEach ~ TearDown
+this -> shared-obj for each specs (beforeEach/it/afterEach) and be setted to empty obj for next spec
+
+Diabling suites: xdescribe  -> not appear in the results
+Pending specs: xit/(pending() in func body)/(empty func body) -> appear in the results as pending.
+
+Spies: ??? onSpy(obj, func)
+ - Spies: and.callThrough()
+ - Spies: and.returnValue(val)
+ - Spies: and.callFake(func)
+ - Spies: and.throwError(errName)
+ - Spies: and.stub   -> cancel callThrough ???
+ - calls. (any, count, argsFor(indx) allArgs, all, mostRecent, first,  reset)
+jasmine.createSpyObj -> create a 'bare' spy, no imple behind it.
+jasmine.createSpyObj -> 
+
+
+
