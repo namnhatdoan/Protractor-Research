@@ -13,8 +13,14 @@
     "typeRoots": [
       "./node_modules/@types"
     ],
-    "types": ["node","jasmine"]
+    "types": [
+      "node",
+      "jasmine"
+    ]
   },
+  "include": [
+    "src/**/*"
+  ],
   "exclude": [
     "node_modules"
   ]

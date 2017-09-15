@@ -1,0 +1,7 @@
+- Promise:
+  - promise.catch(func) ~ promise.then(null,func)
+  - promise.catch return another promise
+     => promise.then.catch ~ promise1 = promise.then(func), promise1.catch
+
+
+- SwitchTo : 

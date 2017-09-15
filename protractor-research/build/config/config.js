@@ -2,7 +2,8 @@
 exports.config = {
     directConnect: true,
     chromeDriver: 'E:\\NEXT\\GeckoDriver\\chromedriver.exe',
-    specs: ['../specs/ngaythobet/signin.js'],
+    specs: ['../specs/pa/spec.js'],
+    //specs:['../specs/testDDD.js'],
     exclude: ['../learning/*'],
     capabilities: {
         browserName: 'chrome',

@@ -1,14 +1,18 @@
 import {element, by, browser} from 'protractor';
+//import {signInPage} from '../../pages/ngaythobet/signInPage'
 
 import * as chai from 'chai';
 
-var urlChanged = function(url) {
-    return function () {
-      return browser.getCurrentUrl().then(function(actualUrl) {
-        return url == actualUrl;
-      });
-    };
-};
+var urlChanged = require('../../utils/browserHelper').urlChanged
+// function(url) {
+//     return function () {
+//       return browser.getCurrentUrl().then(function(actualUrl) {
+//         return url == actualUrl;
+//       });
+//     };
+// };
+
+var signInPage = require('../../pages/ngaythobet/signInPage')
 
 describe('Log In NgayThoBet application with ', function(){
     const txbUser = element(by.name('username'));
@@ -21,22 +25,21 @@ describe('Log In NgayThoBet application with ', function(){
         browser.get('http://192.168.55.189:8081')
     });
       
-    function signIn(username, password){
-        txbUser.clear();
-        txbUser.sendKeys(username);
-        txbPass.clear();
-        txbPass.sendKeys(password);
-        btnSignIn.click();
+    // function signIn(username, password){
+    //     txbUser.clear();
+    //     txbUser.sendKeys(username);
+    //     txbPass.clear();
+    //     txbPass.sendKeys(password);
+    //     btnSignIn.click();
         
-    }
+    // }
 
     it('normal user', function(){
         
     });
 
     it('admin account', function(){
-
-        signIn('admin', 'Admin@123')
+        signInPage.signIn('admin', 'Admin@123')
         // Wait for navigation to dashboard with url http://192.168.55.189:8081/dashboard
         browser.wait(urlChanged("http://192.168.55.189:8081/dashboard"), 10000);
         // Expectation
